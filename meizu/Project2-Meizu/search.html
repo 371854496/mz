@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商品搜索列表</title>
+  <link rel="shortcut icon" href="imgs/title_icon.ico"/>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+<div id="header"></div>
+<div class="empty"></div>
+
+<section>
+  <div class="search_header">
+    <a href="search.html">全部结果></a>
+    <input id="kw" type="text" value="魅族">
+    <button id="search"><img src="imgs/search/search.jpg" height="25px" width="25px"/></button>
+  </div>
+  <div class="classer">
+    <div>
+      <span>分类:</span>
+      <a href="search.html?kw=手机">手机</a>
+      <a href="search.html?kw=手环">手环</a>
+      <a href="search.html?kw=耳机">耳机</a>
+      <a href="search.html?kw=鼠标">鼠标</a>
+      <a href="search.html?kw=键盘">键盘</a>
+    </div>
+    <div>
+      <span>屏幕尺寸:</span>
+      <a href="#">大屏幕</a>
+      <a href="#">小屏幕</a>
+    </div>
+    <div>
+      <span>电池容量:</span>
+      <a href="#">3000mAh-3999mAh</a>
+      <a href="#">4000mAh-5999mAh</a>
+    </div>
+    <div>
+      <span>运行内存:</span>
+      <a href="#">2GB及以下</a>
+      <a href="#">3GB-4GB</a>
+      <a href="#">4GB以上</a>
+    </div>
+    <div class="brand">
+      <span>品牌:</span>
+      <a href="search.html?kw=魅族">魅族</a>
+      <a href="search.html?kw=魅蓝"> 魅蓝</a>
+      <a href="search.html?kw=飞智">飞智</a>
+      <a href="search.html?kw=Gamesir小鸡">Gamesir小鸡</a>
+      <a href="search.html?kw=JBL">JBL</a>
+      <a href="search.html?kw=乐心">乐心</a>
+      <a href="search.html?kw=雷柏">雷柏</a>
+      <a href="search.html?kw=千幻">千幻</a>
+      <a href="search.html?kw=黑爵">黑爵</a>
+      <a href="search.html?kw=三星">三星</a>
+    </div>
+  </div>
+  <div class="condition">
+    <div>
+      <a id="hot" href="">热销</a>
+    </div>
+    <div>
+      <a id="new" href="">新品</a>
+    </div>
+    <div>
+      <a id="price" href="">价格</a>
+    </div>
+    <input id="price_min" type="text" placeholder="¥">-<input id="price_max" type="text" placeholder="¥">
+  </div>
+  <div class="container">
+
+    <!--加载动态内容-->
+  </div>
+</section>
+<div id="footer"></div>
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

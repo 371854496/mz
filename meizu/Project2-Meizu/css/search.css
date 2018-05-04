@@ -1,0 +1,206 @@
+h1, h2, h3, h4, h5, h6, div, p, ul, ol, dl, dd, input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 14px/1.5 Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", SimSun, Heiti, sans-serif;
+}
+
+body {
+  font: 12px "Microsoft Yahei";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+  border: 0;
+}
+
+.clear_b {
+  clear: both;
+}
+
+.clear_l {
+  clear: left;
+}
+
+.clear_r {
+  clear: right;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #666;
+  box-sizing: border-box;
+  border-style: none;
+}
+/******************************************************/
+body {
+  background: #F8F8F8;
+  margin: 0 auto;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header .header-link a {
+  color: rgb(81, 81, 81) !important;
+}
+
+#header .header-link a:hover {
+  color: #31a5e7 !important;
+}
+
+#header .header-logo-img {
+  background: url(../imgs/header/logo-new@2x_22e9f3sa.png) no-repeat;
+}
+
+.search_header {
+  margin: 20px 10px;
+}
+
+.empty {
+  width: 100px;
+  height: 100px;
+}
+
+.search_header > input {
+  border-radius: 50px;
+  width: 150px;
+  height: 25px;
+  padding: 0 10px;
+}
+
+.classer {
+  background: #fff;
+  width: 100%;
+  height: 250px;
+  padding: 10px 10px;
+}
+
+.classer > div {
+  margin: 20px 20px;
+}
+
+.classer > div > span {
+  display: inline-block;
+  width: 70px;
+}
+
+.classer > div > a {
+  margin: 0 20px;
+}
+
+.condition {
+  margin: 20px 0px;
+}
+
+.condition > input {
+  width: 60px;
+  margin: 0 10px;
+}
+
+.condition > div {
+  display: inline;
+  margin: 0 20px;
+}
+
+.sel {
+  display: flex;
+  margin: 0 5px;
+}
+
+.sel > div {
+  width: 25%;
+  height: 20%;
+}
+
+.sel > div > img {
+  border: solid 1px #EFEFEF;
+  width: 90%;
+  height: 90%;
+}
+
+.sel > .selected {
+  border: solid 1px #BDBDBD;
+}
+
+section {
+  margin: 0 3%;
+}
+
+.container > .box {
+  display: block;
+  background: #FFF;
+  width: 220px;
+  margin: 10px;
+  float: left;
+  padding: 5px 10px;
+  transition: all 0.2s;
+}
+
+.box p {
+  height: 36px !important;
+}
+
+.container > .box:hover {
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.container > .box > .up {
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+}
+
+.up > img {
+  width: 100%;
+  height: 100%;
+}
+
+.box > p {
+  text-align: center;
+  margin: 10px auto;
+  color: red;
+  font-size: 12px;
+  clear: both;
+}
+
+.box > .title {
+  color: black;
+  font-size: 15px;
+}
+
+.box .price {
+  color: red;
+  font-size: 20px;
+}
+
+#footer {
+  clear: both;
+}

@@ -1,0 +1,383 @@
+/***Ali用户注册界面***/
+/**定义主体**/
+div.main {
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  min-width: 1024px;
+  max-width: 2560px;
+  overflow: hidden;
+}
+
+/***定义头部**/
+div.header {
+  position: relative;
+  width: 100%;
+  height: 68px;
+  background-color: #fff;
+}
+
+div.header:before {
+  content: "";
+  display: table;
+}
+
+div.header > a > img {
+  position: absolute;
+  left: 10%;
+  width: 110px;
+  top: 14px;
+}
+
+/****表单控件区***/
+div.formDiv {
+  position: relative;
+  color: #373d41;
+  font-size: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 750px;
+  background: #fff url(../imgs/user/banner.png) repeat left center;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+div.formDiv:before {
+  content: "";
+  display: table;
+}
+
+div.formDiv > form h1 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #00a7ea;
+  font-weight: 400;
+}
+
+div.formDiv > form div.tips {
+  position: absolute;
+  top: 83px;
+  right: 20px;
+  font-size: 12px;
+  color: #73777a;
+  letter-spacing: 0.4px;
+  line-height: 30px;
+  text-align: left;
+}
+
+div.formDiv > form div.tips > a {
+  color: #00c1de;
+  letter-spacing: 1px;
+}
+
+div.formDiv > form div.tips > a:hover {
+  color: #00afc9;
+}
+
+div.formDiv > form {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  width: 320px;
+  padding: 75px 35px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+div.formDiv > form > p {
+  margin-top: 20px;
+}
+
+div.formDiv > form > p > input {
+  font-size: 14px;
+  color: #373d41;
+  height: 38px;
+  margin: 0;
+  padding: 0 8px;
+  width: 100%;
+  outline: none;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #c3c5c6;
+  transition: border .3s ease .1s;
+}
+
+div.formDiv > form > p > input:hover {
+  border-color: #00c1de;
+}
+
+div.formDiv > form span.num86 {
+  width: 48px;
+  background: #fff;
+  line-height: 38px;
+  font-size: 14px;
+  height: 38px;
+  display: table-cell;
+  padding: 0 8px;
+  vertical-align: middle;
+  border: 1px solid #c3c5c6;
+  font-weight: 400;
+  border-right: 0;
+  color: #9b9ea0;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+}
+
+div.formDiv > form span.num86 + input {
+  width: 270px;
+  float: left;
+}
+
+/**表单控件--滑块***/
+p.slider {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #e8e8e8;
+  cursor: pointer;
+  user-select: none;
+}
+
+@keyframes slidetounlock {
+  from {
+    background-position: -200px 0;
+  }
+  to {
+    background-position: 200px 0;
+  }
+}
+
+p.slider > span:first-child {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, #fff), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+  animation: slidetounlock 3s infinite;
+  display: block;
+  width: 100%;
+  /*color: #9c9c9c;*/
+  color: #000;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+p.slider > span.bgColor { /**滑条**/
+  background: #00b7d3;
+  width: 50px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 0;
+
+}
+
+p.slider > span.sliderBlock { /**滑块**/
+  border: 1px solid #d7d8d9;
+  box-shadow: 2px 0 6px 0 rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  color: #ad9c9c;
+  width: 50px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  line-height: 38px;
+  cursor: move;
+  background: #fff;
+  font-size: 20px;
+  z-index: 2;
+  left: 0;
+}
+
+div.formDiv > form button {
+  box-sizing: border-box;
+  margin: 0;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 38px;
+  border: 1px solid transparent;
+  color: #fff;
+  background: #00c1de;
+  cursor: pointer;
+  transition: all .1s ease-out;
+  text-align: center;
+  width: 100%;
+}
+
+/**定义checkbox**/
+div.formDiv > form p label {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+}
+
+div.formDiv > form label input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.formDiv > form label input[type=checkbox] + span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #00c1de;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.formDiv label input[type=checkbox]:checked + span:before {
+  content: "√";
+  color: #00c1de;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+div.formDiv label ~ a {
+  display: inline-block;
+  color: #00c1de;
+  font-size: 12px;
+  line-height: 40px;
+  vertical-align: middle;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+
+/****定义输出框的错误提示！****/
+div.focusTips {
+  position: absolute;
+  width: 240px;
+  z-index: 1;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .15);
+  padding: 12px;
+  border: 1px solid transparent;
+  background: #fff;
+  word-wrap: break-word;
+  font-size: 12px;
+  color: #777f84;
+  box-sizing: border-box;
+  line-height: 16px;
+  vertical-align: middle;
+  display: none;
+}
+
+div.focusTips:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -7px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid transparent;
+  background: #fff;
+  transform: rotate(45deg);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, .1);
+}
+
+div.focusTips span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.userName {
+  top: 30%;
+  left: calc(50% + 172px);
+}
+
+.upwd {
+  top: 38%;
+  left: calc(50% + 172px);
+}
+
+.upwdAgain {
+  top: 45.8%;
+  left: calc(50% + 172px);
+}
+
+.zoomIn {
+  animation: w 0.3s cubic-bezier(.23, 1, .32, 1) 0s both;
+  backface-visibility: hidden;
+}
+
+@keyframes w {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/**正确或错误**/
+span.right {
+  background: url(../imgs/user/right&wrong.png) no-repeat center top;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+span.wrong {
+  background: url(../imgs/user/right&wrong.png) no-repeat center -15px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#checkName {
+  position: absolute;
+  top: 31%;
+  left: calc(50% + 172px);
+}
+
+#checkTel {
+  position: absolute;
+  top: 55%;
+  left: calc(50% + 172px);
+}
+
+/***定义出现动画slider_down**/
+@keyframes slider_down {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+  }
+}
+
+.form_slider_down {
+  animation: slider_down 1.5s ease-in;
+  animation-fill-mode: forwards;
+}

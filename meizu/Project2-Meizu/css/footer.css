@@ -1,0 +1,126 @@
+/***footer.css***/
+.footer {
+  margin: 0 auto;
+  padding: 53px 0 20px;
+  z-index: 999;
+  font-family: "微软雅黑", "Microsoft Yahei", Arial, Helvetica, sans-serif, "宋体";
+  font-size: 14px;
+  color: #515151;
+  position: relative;
+  background-color: #fff;
+  border-top: 1px solid #f1f1f1;
+  max-width: 2560px;
+  min-width: 1024px;
+  overflow: hidden;
+}
+
+.footer .wrap {
+  margin: 0 auto;
+}
+
+.footer .wrap .row {
+  position: relative;
+}
+
+.footer .wrap .row ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.footer .wrap .row ul li {
+  width: 25%;
+  text-align: left;
+}
+
+.footer .wrap .row ul li a {
+  display: block;
+  text-align: center;
+  padding-top: 42px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  line-height: 27px;
+  font-size: 12px;
+  color: #666;
+}
+
+.footer .wrap .row ul li:nth-child(1) a {
+  background-image: url(../imgs/footer/icon-service_01_6e3fb2e.png);
+}
+
+.footer .wrap .row ul li:nth-child(2) a {
+  background-image: url(../imgs/footer/icon-service_02_9634bc0.png);
+}
+
+.footer .wrap .row ul li:nth-child(3) a {
+  background-image: url(../imgs/footer/icon-service_03_507b23e.png);
+}
+
+.footer .wrap .row ul li a p:first-child {
+  color: #303235;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Source Han Sans", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", SimSun, Heiti, sans-serif;
+}
+
+.footer .wrap .row ul li a.right-server {
+  text-align: right;
+  display: block;
+  margin-top: 2px;
+  padding: 0;
+  padding-right: 35px;
+}
+
+.footer .wrap .row ul li a.right-server p:nth-child(1) {
+  color: #999;
+  font-size: 12px;
+}
+
+.footer .wrap .row ul li a.right-server p:nth-child(2) {
+  color: #00c3f5;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.footer .wrap .row ul li a.right-server p:nth-child(3) {
+  color: #333;
+  font-size: 16px;
+  margin-top: 15px;
+  background: url(../imgs/footer/footer_icon_09_60fabcd.png) no-repeat 68% center;
+}
+
+.footer .wrap hr {
+  margin: 40px auto 28px;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 0;
+}
+
+.footer .footer-bottom-info ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-bottom-info ul li {
+  margin: 0 3px;
+  padding: 0 15px;
+  color: #999;
+  line-height: 18px;
+  font-size: 12px;
+  border-right: 1px solid #d6d6d6;
+}
+
+.footer .footer-bottom-info ul li a {
+  color: #999;
+}
+
+.footer .footer-bottom-info ul li:last-child {
+  border: 0;
+  padding-left: 20px;
+  background: url(../imgs/footer/country.png) no-repeat left top;
+  background-size: 18px;
+}

@@ -1,0 +1,121 @@
+form {
+  position: relative;
+}
+/*手机参数表填写单*/
+#my-form input[type=text] {
+  margin: 8px 0;
+}
+
+#btn-upload {
+  width: 70%;
+  margin: 10px auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#btn-clear {
+  width: 50%;
+}
+/***table wrap***/
+#table-wrap,#family-table-wrap,#use-table-wrap,#pic-table-wrap{
+  overflow:hidden;
+  white-space: nowrap;
+  margin-bottom:15px;
+  height:38px;
+}
+table{
+  table-layout: fixed;
+}
+table td {
+  vertical-align: middle;
+  overflow:hidden;
+}
+table th{
+  text-align:center;
+}
+
+/**修改框**/
+#modify-wrap{
+  position:fixed;
+  width:350px;
+  background:rgba(255,255,255,0.95);
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  top:10%;
+  left:50%;
+  margin-left:-175px;
+  padding:10px 30px;
+
+  display:none;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  z-index:3;
+}
+#btn-modify-danger{
+  margin-top:10px;
+}
+
+/**配色图片上传区**/
+.upload_img{
+  margin:20px auto;
+  height:270px;
+}
+.upload-wrap{
+  margin:10px 50px;
+  padding-left:30px;
+}
+.upload-wrap span{
+  font-size:16px;
+  line-height:36px;
+  font-weight:600;
+  color:#333;
+  letter-spacing: 2px;
+}
+.upload-wrap input{
+  margin-left:20px;
+}
+.upload-input-wrap{
+  position:absolute;
+  left:62%;
+  top:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  padding:20px 30px;
+  color:#333;
+  font-size:18px;
+  width:300px;
+  text-align:left;
+  font-weight:600;
+  margin-left:-150px;
+  border-radius:5px;
+}
+.upload-input-wrap input[type=text]{
+  display:block;
+  margin-left:10px;
+  padding-left:10px;
+  width:100%;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  border-radius:3px;
+}
+#btn-up-imgs{
+  display:block;
+  width:82px;
+  margin:0 auto;
+}
+
+/***详请图更新****/
+.upload_detail_wrap{
+  margin-left:80px;
+  font-size:18px;
+  padding-bottom:50px;
+}
+#update_detail_zip{
+  margin:10px 15px;
+}
+.submit-input-wrap{
+  position:absolute;
+  top:0px;
+  left:50%;
+}
+hr{
+  border-top: 1px solid #ccc;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>魅族用户注册</title>
+  <link rel="shortcut icon" href="imgs/title_icon.ico"/>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/User-Register.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <a href="HOME.html"><!--logo-->
+      <img src="imgs/user/logo-new@2x_22e9f3sa.png" alt="">
+    </a>
+  </div>
+  <!--表单区-->
+  <div class="formDiv">
+    <form>
+      <h1>注册 Flyme 账号</h1>
+      <div class="tips">
+        <a href="User_login.html">快捷登录 ></a>
+      </div>
+      <p><input type="text" id="userName" placeholder="设置昵称"></p>
+      <p><input type="password" id="upwd" placeholder="设置登录密码"></p>
+      <p><input type="password" id="upwdAgain" placeholder="请再次确认密码"></p>
+      <p>
+        <span class="num86">+86</span>
+        <input type="text" id="telphone" placeholder="请输入手机号码" maxlength="11">
+      <div style="clear:both;"></div>
+      </p>
+
+      <!--滑块-->
+      <p class="slider">
+        <span>请按住滑块，拖动到最右边</span>
+        <span class="bgColor"></span>
+        <span class="sliderBlock">》</span>
+      </p>
+
+      <p>
+        <button id="submitBtn" type="button">同意条款并注册</button>
+      </p>
+
+      <!-- checkbox -->
+      <p>
+        <label for="choose">
+          <input type="checkbox" id="choose">
+          <span></span>
+        </label>
+        <a href="#">同意并愿意遵守Flyme服务协议和法律声明</a>
+      </p>
+    </form>
+
+    <!--定义提示-->
+    <div class="focusTips userName zoomIn">
+      <p>·&nbsp;5-25个字符，推荐使用中文</p>
+      <p>·&nbsp;请勿包含身份证/银行卡等隐私信息,<br>一旦设置成功无法修改</p>
+    </div>
+    <!--用户名验证提示-->
+    <div id="checkName"><span></span></div>
+
+    <div class="focusTips upwd zoomIn">
+      <p><span class=""></span>6-20个字符，密码不能和会员名相同</p>
+      <p><span class=""></span>只能包含字母、数字以及标点符号（除空格）</p>
+      <p><span class=""></span>字母、数字和标点符号至少包含2种</p>
+    </div>
+    <div class="focusTips upwdAgain zoomIn">
+      <p><span class=""></span>请再次输入密码</p>
+    </div>
+
+    <!--手机号验证提示-->
+    <div id="checkTel"><span></span></div>
+  </div>
+</div>
+
+<!--footer 引入-->
+<div id="footer"></div>
+</body>
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/User_register.js"></script>
+</html>

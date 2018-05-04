@@ -1,0 +1,312 @@
+/***账号管理页面***/
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/**头部*/
+.header {
+  max-width: 2560px;
+  min-width: 1024px;
+  overflow: hidden;
+}
+
+.header-container {
+  width: 1000px;
+  margin: 0 auto 30px;
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: white;
+  padding-top: 38px;
+}
+
+.header-container a.logo {
+  display: block;
+  background: url(../imgs/user/logo-new@2x_22e9f3sa.png) no-repeat center center;
+  width: 115px;
+  height: 20px;
+  float: left;
+  margin-right: 65px;
+  margin-top: 5px;
+}
+
+/*ul links**/
+.ul-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 580px;
+  height: 26px;
+  float: left;
+  justify-content: space-between;
+}
+
+.ul-links li {
+  flex-basis: 16.6667%;
+  text-align: center;
+}
+
+.ul-links li a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #515151;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.ul-links li a:hover {
+  color: rgb(12, 187, 239);
+}
+
+/**退出**/
+.loginWrap {
+  float: right;
+  color: #7f7f7f;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.loginWrap span:nth-child(2) {
+  border-left: 1px solid #7f7f7f;
+  margin: 0 10px;
+}
+
+.loginWrap a:nth-child(3) {
+  color: #7f7f7f;
+}
+
+#loginOut:hover {
+  color: darkred;
+}
+
+/*****/
+div.main {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+div.tags {
+  height: 56px;
+  border-bottom: #e4e7e9 1px solid;
+}
+
+div.tags a {
+  display: inline-block;
+  width: 100px;
+  height: 56px;
+  text-align: center;
+  color: #7f7f7f;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  line-height: 56px;
+  vertical-align: bottom;
+}
+
+div.tags .active {
+  color: #00a7ea;
+  border-bottom: 2px solid #1daeed;
+}
+
+.topWrap {
+  margin-top: 30px;
+  position: relative;
+}
+
+.topWrap .avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 3px 5px 18px rgba(0, 0, 0, 0.2);
+  background-image: url(../imgs/user/avatar/default.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-left: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.edit_avatar { /**头像编辑**/
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  transform: translateY(100%);
+  transition: all 0.3s linear;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.topWrap .avatar:hover .edit_avatar {
+  transform: translateY(0);
+}
+
+.topWrap .Wrap, .Wrap2 {
+  position: absolute;
+  top: 20%;
+  right: 33%;
+  font-size: 18px;
+  line-height: 28px;
+  width: 200px;
+}
+
+.Wrap2 {
+  right: 3.5%;
+}
+
+.topWrap .Wrap h2, .topWrap .Wrap2 h2 {
+  margin-bottom: 15px;
+}
+
+.topWrap .edit {
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  letter-spacing: 2px;
+}
+
+/**个人资更新框***/
+.person_info_modify, .upwd_info_modify {
+  position: absolute;
+  width: 300px;
+  top: 18%;
+  left: 52%;
+  margin-left: -150px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 3;
+  display: none;
+  animation-duration: 1.1s;
+  animation-fill-mode: forwards;
+}
+
+.upwd_info_modify {
+  /*display:block;*/
+}
+
+.person_info_modify p, .upwd_info_modify p {
+  font-size: 18px;
+  line-height: 25px;
+  text-indent: 5px;
+  margin-top: 5px;
+}
+
+.person_info_modify input, .upwd_info_modify input {
+  display: block;
+  margin: 5px 0 5px 20px;
+  padding-left: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  width: 85%;
+}
+
+.person_info_modify button, .upwd_info_modify button {
+  margin: 15px auto;
+  width: 90%;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+}
+
+/****头像上传模块clip***/
+.mask {
+  position: fixed;
+  width: 1000px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.25);
+  top: 95px;
+  left: 50%;
+  margin-left: -500px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 3;
+
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+#clipArea {
+  position: absolute;
+  width: 600px;
+  height: 450px;
+  left: 50px;
+  top: 25px;
+  border-radius: 15px;
+}
+
+#file {
+  position: absolute;
+  right: 6%;
+  top: 10%;
+  display: block;
+  font-size: 17px;
+  line-height: 28px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 5px 0;
+  width: 240px;
+}
+
+#clipBtn, #submitBtn {
+  position: absolute;
+  right: 20%;
+  bottom: 6%;
+  font-size: 17px;
+  width: 100px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+#submitBtn {
+  right: 5%;
+}
+
+#view {
+  position: absolute;
+  right: 25px;
+  top: 20%;
+  width: 300px;
+  height: 300px;
+}
+
+.click_out {
+  position: absolute;
+  font-size: 25px;
+  right: 20px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/***页脚引入****/
+#footer {
+  width: 1000px !important;
+  margin: 120px auto 0 !important;
+}

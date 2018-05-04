@@ -1,0 +1,308 @@
+.con-am {
+  animation: sjimg 1s linear 4s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes sjimg {
+  0% {
+    top: 8%;
+    left: 29%;
+  }
+  100% {
+    top: 7%;
+    left: 28%;
+  }
+}
+
+.con-am1 {
+  animation: logoimg .5s linear 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes logoimg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.con-am2 {
+  animation: titlel .5s linear 2.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes titlel {
+  from {
+    opacity: 0;
+    top: 480px;
+  }
+  to {
+    opacity: 1;
+    top: 470px;
+  }
+}
+
+.con-bgam {
+  animation: bg 1s linear 4s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes bg {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/*2*/
+.con2-am {
+  animation: con2bg 2s linear 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes con2bg {
+  0% {
+    background-Image: url(../imgs/PRO6PLUS_img/screen-pic_856dcdc.jpg);
+  }
+  100% {
+    background-Image: url(../imgs/PRO6PLUS_img/screen_23570a5.jpg);
+  }
+}
+
+.con2-center-amh {
+  animation: center2 .5s linear 2s;
+  animation-fill-mode: both;
+}
+
+.con2-center-amp {
+  animation: center2 .5s linear 2.5s;
+  animation-fill-mode: both;
+}
+
+.con2-center-ama {
+  animation: center2 .5s linear 3s;
+  animation-fill-mode: both;
+}
+
+@keyframes center2 {
+  0% {
+    opacity: 0;
+    top: 18px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.list-item-amh {
+  animation: center2 .5s linear 3.5s;
+  animation-fill-mode: both;
+}
+
+.list-item-amp {
+  animation: center2 .5s linear 4s;
+  animation-fill-mode: both;
+}
+
+.list-item-amd {
+  animation: center2 .5s linear 4.5s;
+  animation-fill-mode: both;
+}
+
+/*3*/
+.con3-center-amh {
+  animation: center2 .5s linear 0.5s;
+  animation-fill-mode: both;
+}
+
+.con3-center-amp {
+  animation: center2 .5s linear 1s;
+  animation-fill-mode: both;
+}
+
+/*4*/
+.con4-center-ama {
+  animation: center2 .5s linear 1.5s;
+  animation-fill-mode: both;
+}
+
+/*5*/
+.con5-center-amh {
+  animation: center2 .5s linear 0.5s;
+  animation-fill-mode: both;
+}
+
+.con5-center-amp {
+  animation: center2 .5s linear 1s;
+  animation-fill-mode: both;
+}
+
+.list-item-amh5 {
+  animation: center2 .5s linear 1.5s;
+  animation-fill-mode: both;
+}
+
+.list-item-amp5 {
+  animation: center2 .5s linear 2s;
+  animation-fill-mode: both;
+}
+
+.list-item-amd5 {
+  animation: center2 .5s linear 2.5s;
+  animation-fill-mode: both;
+}
+
+.con5-center-ama {
+  animation: center2 .5s linear 3s;
+  animation-fill-mode: both;
+}
+
+/*6同3*/
+/*7同3*/
+/*8*/
+@keyframes mtouch {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  5%, 40% {
+    opacity: 1;
+    transform: none;
+  }
+  45%, 50%, 100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.mtouch-h {
+  animation: mtouch 12s .1s both infinite;
+}
+
+.mtouch-p {
+  animation: mtouch 12s .2s both infinite;
+}
+
+.mtouch-d1 {
+  animation: mtouch 12s .4s both infinite;
+}
+
+.mtouch-d2 {
+  animation: mtouch 12s .6s both infinite;
+}
+
+/**/
+.mtouch-h2 {
+  animation: mtouch 12s 6s both infinite;
+}
+
+.mtouch-p2 {
+  animation: mtouch 12s 6.2s both infinite;
+}
+
+.mtouch-d12 {
+  animation: mtouch 12s 6.4s both infinite;
+}
+
+.mtouch-d22 {
+  animation: mtouch 12s 6.6s both infinite;
+}
+
+.mtouch-btn-1am {
+  animation: btn1 1s linear;
+}
+
+.mtouch-btn-2am {
+  animation: btn2 1s linear;
+}
+
+.mtouch-btn-3am {
+  animation: btn3 1s linear;
+}
+
+.mtouch-btn-4am {
+  animation: btn4 1s linear;
+}
+
+.mtouch-btn-5am {
+  animation: btn5 1s linear;
+}
+
+.mtouch-btn-6am {
+  animation: btn6 1s linear;
+}
+
+.mtouch-btn-7am {
+  animation: btn7 1s linear;
+}
+
+@keyframes btn1 {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn2 {
+  0% {
+    transform: translateY(260px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn3 {
+  0% {
+    transform: translateY(220px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn4 {
+  0% {
+    transform: translateY(180px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn5 {
+  0% {
+    transform: translateY(140px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn6 {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn7 {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*9*/
+/*同7*/

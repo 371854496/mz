@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>魅族用户登录</title>
+  <link rel="shortcut icon" href="imgs/title_icon.ico"/>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/User_login.css">
+</head>
+<body>
+<div class="main">
+  <!--头部-->
+  <div class="header">
+    <a href="HOME.html"><!--logo-->
+      <img src="imgs/user/logo-new@2x_22e9f3sa.png" alt="">
+    </a>
+  </div>
+
+  <!--container-->
+  <div class="container">
+    <form class="main_form">
+      <div class="title">
+        <a href="#">账号登录</a>
+        <span></span>
+        <a href="#" class="no_active">验证码登录</a>
+      </div>
+      <p>
+        <span class="uname">用户名</span>
+        <input id="uname" type="text" class="" maxlength="25" placeholder="5-25位字母、中文">
+      </p>
+      <p>
+        <span class="upwd">密&nbsp;&nbsp;&nbsp;码</span>
+        <input id="upwd" type="password" class="" maxlength="20" placeholder="6-20位字符与数字组合">
+      </p>
+      <!--验证码图片-->
+      <p class="valiPic">
+        <img src="data/valiCodeCreate/code.php" alt="验证码图片"><i class="refresh"></i>
+      </p>
+      <p class="valiCode">
+        <span class="valiCodeText">验证码</span>
+        <input id="valiCode" type="text" maxlength="4" placeholder="4位字母">
+      </p>
+      <p>
+        <input type="button" value="登录" class="login_button">
+      </p>
+      <p class="links">
+        <a href="User-register.html">注册</a>
+        <a href="#">忘记密码？</a>
+      </p>
+      <!--正确错误提示-->
+      <div class="unameTips"></div>
+      <div class="upwdTips"></div>
+      <div class="valiCodeTips"></div>
+    </form>
+  </div>
+
+</div>
+
+<!--footer 引入-->
+<div id="footer"></div>
+</body>
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/User_login.js"></script>
+</html>

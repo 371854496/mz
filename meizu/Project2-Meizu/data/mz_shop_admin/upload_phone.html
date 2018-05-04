@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商城后台</title>
+  <link rel="shortcut icon" href="../../imgs/title_icon.ico"/>
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../css/animate.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div class="container">
+  <!--导航栏-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../home.html">Meizu</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Link <span class="sr-only">(current)</span></a>
+          </li>
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" role="button" aria-haspopup="true"
+               aria-expanded="false">Dropdown</a>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!--------------------------------------------------------------------------------------->
+  <!--标题-->
+  <h1 class="text-primary text-center ">魅族商城手机更新上传后台系统</h1>
+  <!--手机参数表填写单-->
+  <form class="form-horizontal" id="my-form">
+    <div class="form-group">
+      <label for="phone_family_id" class="col-md-2 control-label">型号编号</label>
+      <div class="col-md-4">
+        <input type="text" id="phone_family_id" name="phone_family_id" class="form-control"
+               placeholder="phone_family_id">
+      </div>
+
+      <label for="pname" class="col-md-2 control-label">型号名</label>
+      <div class="col-md-4">
+        <input type="text" id="pname" name="pname" class="form-control" placeholder="pname">
+      </div>
+
+      <label for="title" class="col-md-2 control-label">商品标题</label>
+      <div class="col-md-4">
+        <input type="text" id="title" name="title" class="form-control" placeholder="title">
+      </div>
+
+      <label for="subtitle" class="col-md-2 control-label">小标题</label>
+      <div class="col-md-4">
+        <input type="text" id="subtitle" name="subtitle" class="form-control" placeholder="subtitle">
+      </div>
+
+      <label for="price" class="col-md-2 control-label">价格</label>
+      <div class="col-md-4">
+        <input type="text" id="price" name="price" class="form-control" placeholder="price">
+      </div>
+
+      <label for="spec" class="col-md-2 control-label">规格</label>
+      <div class="col-md-4">
+        <input type="text" id="spec" name="spec" class="form-control" placeholder="spec">
+      </div>
+
+      <label for="color" class="col-md-2 control-label">颜色</label>
+      <div class="col-md-4">
+        <input type="text" id="color" name="color" class="form-control" placeholder="color">
+      </div>
+
+      <label class="col-md-2 control-label">清空数据</label>
+      <div class="col-md-4 text-center  ">
+        <input type="button" value="清空" id="btn-clear" class="btn  btn-danger btn">
+      </div>
+
+      <input type="button" value="添加新产品" id="btn-upload" class="btn btn-success  col-xs-3 btn-block">
+    </div>
+  </form>
+  <hr>
+  <!--------------------------------------------------------------------------------------->
+  <!--展开折叠1-->
+  <button type="button" class="btn btn-block btn-primary btn-use-collapse">
+    产品Family表 展开/折叠
+  </button>
+  <!--手机Family表数据表-->
+  <div id="family-table-wrap" data-collapse=true class="table-responsive">
+    <table id="family-table" class="table table-bordered table-striped  table-hover text-center">
+      <thead>
+      <tr>
+        <th>fid</th>
+        <th>fname</th>
+        <th>detail</th>
+      </tr>
+      </thead>
+      <tbody class="" id="family-tbody">
+      <!--ajax内容-->
+      </tbody>
+    </table>
+  </div>
+
+  <!--展开折叠2-->
+  <button type="button" class="btn btn-block btn-primary btn-use-collapse">
+    产品参数表 展开/折叠
+  </button>
+  <!--phone数据表-->
+  <div id="table-wrap" data-collapse=true class="table-responsive">
+    <table id="my-table" class="table table-bordered table-striped  table-hover text-center">
+      <thead>
+      <tr>
+        <th>phone_id</th>
+        <th>fid</th>
+        <th>pname</th>
+        <th>title</th>
+        <th>subtitle</th>
+        <th>price</th>
+        <th>spec</th>
+        <th>network</th>
+        <th>color</th>
+        <th>modify</th>
+      </tr>
+      </thead>
+      <tbody class="" id="tbody">
+      <!--ajax内容-->
+      </tbody>
+    </table>
+  </div>
+
+  <!--展开折叠3-->
+  <button type="button" class="btn btn-block btn-primary btn-use-collapse">
+    用户表 展开/折叠
+  </button>
+  <!--用户数据表-->
+  <div id="use-table-wrap" data-collapse=true class="table-responsive">
+    <table id="use-table" class="table table-bordered table-striped  table-hover text-center">
+      <thead>
+      <tr>
+        <th>uid</th>
+        <th>uname</th>
+        <th>upwd</th>
+        <th>tel</th>
+        <th>avatar</th>
+        <th>mtime</th>
+        <th>ip</th>
+      </tr>
+      </thead>
+      <tbody class="" id="use-tbody">
+      <!--ajax内容-->
+      </tbody>
+    </table>
+  </div>
+
+  <!--展开折叠4-->
+  <button type="button" class="btn btn-block btn-primary btn-use-collapse">
+    产品配色图 展开/折叠
+  </button>
+  <!--产品配色图表-->
+  <div id="pic-table-wrap" data-collapse=true class="table-responsive">
+    <table id="pic-table" class="table table-bordered table-striped  table-hover text-center">
+      <thead>
+      <tr>
+        <th>pid</th>
+        <th>phone_id</th>
+        <th>fid</th>
+        <th>color</th>
+        <th>img1</th>
+        <th>img2</th>
+        <th>img3</th>
+        <th>img4</th>
+      </tr>
+      </thead>
+      <tbody class="" id="pic-tbody">
+      <!--ajax内容-->
+      </tbody>
+    </table>
+  </div>
+  <!------------------------------------------------------------------------------------------->
+  <!--phone表 修改div框-->
+  <div id="modify-wrap" class="" data-pid="">
+    <h3 class="text-center text-primary ">修改产品</h3>
+    <form class="" id="modify-form">
+      <div class="form-group">
+        <label class="control-label">title</label>
+        <input type="text" class="form-control" name="title">
+        <label class="control-label">subtitle</label>
+        <input type="text" class="form-control" name="subtitle">
+        <label class="control-label">price</label>
+        <input type="text" class="form-control" name="price">
+        <label class="control-label">spec</label>
+        <input type="text" class="form-control" name="spec">
+        <label class="control-label">network</label>
+        <input type="text" class="form-control" name="network">
+      </div>
+    </form>
+    <botton class="btn btn-success btn-block" id="btn-modify-success">提交修改</botton>
+    <botton class="btn btn-danger btn-block" id="btn-modify-danger">取消</botton>
+  </div>
+  <!--------------------------------------------------------------------------------------------->
+  <hr>
+  <!--上传产品的不同配色-->
+  <div class="upload_img">
+    <form id="form-upload" enctype="multipart/form-data">
+      <div class="form-group">
+        <div class="upload-wrap">
+          <span class="glyphicon glyphicon-cloud-upload">主配色（注意选择）：</span>
+          <input type="file" name="file[]" id="file1">
+        </div>
+        <div class="upload-wrap">
+          <span class="glyphicon glyphicon-cloud-upload">配色二：</span>
+          <input type="file" name="file[]" id="file2">
+        </div>
+        <div class="upload-wrap">
+          <span class="glyphicon glyphicon-cloud-upload">配色三：</span>
+          <input type="file" name="file[]" id="file3">
+        </div>
+        <div class="upload-wrap">
+          <span class="glyphicon glyphicon-cloud-upload">配色四：</span>
+          <input type="file" name="file[]" id="file4">
+        </div>
+
+        <div class="upload-input-wrap">
+          pid (整数)：<input type="text" name="pid" id="upload-pid">
+          配色名 (英文)：<input type="text" name="color" id="upload-color">
+          <button type="button" class="btn btn-success btn-sm " id="btn-up-imgs">
+            上传配色图
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!----------------------------------------------------------------------------------------------->
+  <hr>
+  <!--手机机型详情图片页更新-->
+  <form action="" class="form-inline">
+    <div class="form-group upload_detail_wrap" >
+      <label for="update_detail_zip" class="control-label glyphicon glyphicon-cloud-upload">请选择手机详请图ZIP文件</label>
+      <input type="file" name="zipfile" id="update_detail_zip" class="">
+      <div class="submit-input-wrap">
+        <label for="update_detail" class="control-label ">更新手机型号pname</label>
+        <input id="update_detail" type="text" class="form-control" name="pname">
+        <input type="button" class="btn btn-success" id="btn-update_detail" value="上传更新">
+      </div>
+    </div>
+  </form>
+
+</div>
+</body>
+<script src="../../js/jquery-3.2.0.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="js/admin.js"></script>
+</html>
